@@ -81,7 +81,8 @@ go-web-app-9dcb6c569-zzs24   0/1     CrashLoopBackOff   1 (5s ago)   8s
 
 **I have encountered an application crash that I have not been able to solve, since the connection port variable against postgress is not able to convert it to int. Honestly I don't have a debugging experience in GO that allows me to find the specific error. I have tested that the database allows connections and it is up.
 
-```time="2023-04-18T06:09:55Z" level=fatal msg="error running application" error="failed to process environment variables: envconfig.Process: assigning POSTGRESQL_PORT to PostgresPort: converting 'tcp://10.147.241.69:5432' to type int. details: strconv.ParseInt: parsing \"tcp://10.147.241.69:5432\": invalid syntax"
+```
+time="2023-04-18T06:09:55Z" level=fatal msg="error running application" error="failed to process environment variables: envconfig.Process: assigning POSTGRESQL_PORT to PostgresPort: converting 'tcp://10.147.241.69:5432' to type int. details: strconv.ParseInt: parsing \"tcp://10.147.241.69:5432\": invalid syntax"
 `````
 
 Regarding to the HA availability, i think we use a architecture like this diagram:
